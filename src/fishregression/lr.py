@@ -1,6 +1,6 @@
 import pickle
 import numpy as np
-from mmanager import get_model_path
+from fishregression.mmanager import get_model_path
 
 def lr_api(length):
     # 모델 파일 경로 가져오기

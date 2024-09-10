@@ -1,5 +1,5 @@
 import pickle
-from mmanager import get_model_path
+from fishregression.mmanager import get_model_path
 
 def knn_api(length, weight):
     # 모델 파일 경로 가져오기
