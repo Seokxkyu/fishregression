@@ -11,4 +11,4 @@ def predict():
     # 물고기 분류 API 호출
     fish_class = knn_api(length, weight)
 
-    print(f"🐟 length:{length} 물고기는 weight:{weight} 으로 예측되며 종류는 {fish_class} 입니다")
+    print(f"🐟 length인 {length}인 물고기의 weight는 {weight} 으로 예측되며, 종류는 {fish_class} 입니다.")
