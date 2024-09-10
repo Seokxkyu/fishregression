@@ -22,8 +22,7 @@ def read_item(l: float):
         dict:
           weight (float): 물고기 무게(g)
     """
-    length_poly = np.array([l**2, l]).reshape(1, -1)
-    weight = lr_api(length_poly)
+    weight = lr_api(l)
     return {"weight": weight}
 
 @app.get("/knn")
