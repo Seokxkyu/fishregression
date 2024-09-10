@@ -1,21 +1,18 @@
-from fishregression.mmanager import get_model_path
-import numpy as np
 import pickle
-from sklearn.linear_model import LinearRegression
+import numpy as np
+from mmanager import get_model_path
 
 def lr_api(length):
-    # path = get_model_path()
+    # 모델 파일 경로 가져오기
+    model_path = get_model_path('lr_model.pkl')
 
-    # with open(file=path, mode='rb') as f:
-    #    lr = pickle.load(f)
-
-    # lr 모델 경로 수정
-    with open(file='/home/kyuseok00/code/fishregression/note/lr_model.pkl', mode='rb') as f:
+    # 모델 로드
+    with open(model_path, 'rb') as f:
         lr_model = pickle.load(f)
 
-    # 2차 항이 포함된 데이터 생성 (길이의 제곱, 길이)
+    # 다항 회귀를 위한 2차 항 추가
     length_poly = np.array([length**2, length]).reshape(1, -1)
 
-    # 선형 회귀 모델로 무게 예측
+    # 예측
     predicted_weight = lr_model.predict(length_poly)
     return predicted_weight[0]
