@@ -1,5 +1,6 @@
 from fishregression.lr import lr_api
 from fishregression.knn import knn_api
+import requests
 
 def predict():
     # 사용자 입력을 바로 받음
@@ -12,3 +13,5 @@ def predict():
     fish_class = knn_api(length, weight)
 
     print(f"🐟 length가 {length}인 물고기의 weight는 {weight}으로 예측되며, 종류는 '{fish_class}' 입니다.")
+
+
