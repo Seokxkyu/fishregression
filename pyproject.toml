@@ -1,15 +1,16 @@
 [project]
 name = "fishregression"
-version = "0.1.0"
+version = "0.2.0"
 description = "Default template for PDM package"
 authors = [
     {name = "Seokxkyu", email = "kyuseok000@gmail.com"},
 ]
 dependencies = [
     "fastapi>=0.112.2",
-    "uvicorn[standard]>=0.30.6"
+    "uvicorn[standard]>=0.30.6",
     "scikit-learn>=1.5.1",
 ]
+
 requires-python = ">=3.11"
 readme = "README.md"
 license = {text = "MIT"}
