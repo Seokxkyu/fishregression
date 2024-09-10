@@ -1,4 +1,5 @@
 from typing import Union
+import numpy as np
 from fishregression.lr import lr_api
 from fishregression.knn import knn_api
 from fastapi import FastAPI
