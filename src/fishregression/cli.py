@@ -14,7 +14,7 @@ def predict():
 
     print(f"🐟 length가 {length}인 물고기의 weight는 {weight}으로 예측되며, 종류는 '{fish_class}' 입니다.")
 
-def get_weight(l, url="http://43.202.54.32:8080/how_weight/lr"):
+def get_weight(l, url="http://52.78.216.251:8080/how_weight/lr"):
     params = {
         'l': l,
     }
@@ -24,7 +24,7 @@ def get_weight(l, url="http://43.202.54.32:8080/how_weight/lr"):
     r = response.json()
     return r['weight']
 
-def fish_kind(l, w, url="http://43.202.54.32:8080/kind_fish/fish"):
+def fish_kind(l, w, url="http://52.78.216.251:8080/kind_fish/fish"):
     params = {'length': l, 'weight': w}
     response = requests.get(url, params=params)
     r = response.json()
